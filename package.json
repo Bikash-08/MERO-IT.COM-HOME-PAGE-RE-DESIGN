@@ -1,0 +1,11 @@
+{
+  "name": "mero-it-home-root",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "cd \"home page redesign\" && npm run dev",
+    "build": "cd \"home page redesign\" && npm run build",
+    "preview": "cd \"home page redesign\" && npm run preview",
+    "install": "cd \"home page redesign\" && npm install"
+  }
+}
