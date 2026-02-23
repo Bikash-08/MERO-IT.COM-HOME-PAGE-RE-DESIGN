@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import {
   FileText,
   TrendingUp,
@@ -7,11 +7,14 @@ import {
   Zap,
   Users,
   CheckCircle,
+  Menu,
+  X,
   ArrowRight,
 } from 'lucide-react';
 
 function App() {
   const observerRef = useRef(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
     observerRef.current = new IntersectionObserver(
@@ -40,6 +43,16 @@ function App() {
             <div className="flex items-center space-x-2">
               <img src="https://mero-it.com/Content/images/logo.png" alt="Mero-IT" className="h-10" />
             </div>
+
+            <button
+              onClick={() => setMobileOpen((s) => !s)}
+              aria-expanded={mobileOpen}
+              aria-label="Toggle navigation"
+              className="md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100"
+            >
+              {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+
             <div className="hidden md:flex items-center space-x-8">
               <a href="#home" className="text-gray-600 transition-colors font-medium hover:opacity-70 text-xl" style={{ color: '#D61223' }}>Home</a>
               <a href="#services" className="text-gray-600 transition-colors font-medium hover:opacity-70 text-xl" style={{ color: '#D61223' }}>Services</a>
@@ -48,6 +61,17 @@ function App() {
               <a href="#contact" className="text-gray-600 transition-colors font-medium hover:opacity-70 text-xl" style={{ color: '#D61223' }}>Contact</a>
               
             </div>
+          </div>
+        </div>
+
+        {/* Mobile menu */}
+        <div className={`${mobileOpen ? 'block' : 'hidden'} md:hidden bg-white border-t border-gray-100` }>
+          <div className="px-6 pb-6 space-y-4">
+            <a onClick={() => setMobileOpen(false)} href="#home" className="block text-gray-700 font-medium text-lg" style={{ color: '#D61223' }}>Home</a>
+            <a onClick={() => setMobileOpen(false)} href="#services" className="block text-gray-700 font-medium text-lg" style={{ color: '#D61223' }}>Services</a>
+            <a onClick={() => setMobileOpen(false)} href="#support" className="block text-gray-700 font-medium text-lg" style={{ color: '#D61223' }}>Support</a>
+            <a onClick={() => setMobileOpen(false)} href="#about" className="block text-gray-700 font-medium text-lg" style={{ color: '#D61223' }}>About</a>
+            <a onClick={() => setMobileOpen(false)} href="#contact" className="block text-gray-700 font-medium text-lg" style={{ color: '#D61223' }}>Contact</a>
           </div>
         </div>
       </nav>
@@ -240,20 +264,20 @@ function App() {
             <div>
               <h3 className="text-white font-semibold mb-4">Our Services</h3>
               <ul className="space-y-3">
-                <li className="transition-colors" style={{ color: '#D61223' }}>Custom Software Development</li>
-                <li className="transition-colors" style={{ color: '#D61223' }}>Web & Mobile Solutions</li>
-                <li className="transition-colors" style={{ color: '#D61223' }}>Automation & Integration</li>
-                <li className="transition-colors" style={{ color: '#D61223' }}>Cloud & SAS Services</li>
+                <li className="transition-colors text-gray-400" >Custom Software Development</li>
+                <li className="transition-colors text-gray-400" >Web & Mobile Solutions</li>
+                <li className="transition-colors text-gray-400">Automation & Integration</li>
+                <li className="transition-colors text-gray-400">Cloud & SAS Services</li>
               </ul>
             </div>
 
             <div>
               <h3 className="text-white font-semibold mb-4">Our Contact</h3>
               <ul className="space-y-3">
-                <li className="transition-colors" style={{ color: '#D61223' }}>Sikuchhen, Kirtipur</li>
-                <li className="transition-colors" style={{ color: '#D61223' }}>9 Kathmandu Nepal</li>
-                <li><a href="" className="transition-colors" style={{ color: '#D61223' }}>Phone : +977-1-4334077</a></li>
-                <li><a href="" className="transition-colors" style={{ color: '#D61223' }}>info@mero-it.com</a></li>
+                <li className="transition-colors text-gray-400">Sikuchhen, Kirtipur</li>
+                <li className="transition-colors text-gray-400" >9 Kathmandu Nepal</li>
+                <li><a href="" className="transition-colors text-gray-400">Phone : +977-1-4334077</a></li>
+                <li><a href="" className="transition-colors text-gray-400">info@mero-it.com</a></li>
               </ul>
             </div>
 
@@ -294,9 +318,9 @@ function App() {
               © 2024 Mero-IT. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-gray-400 transition-colors text-sm hover:opacity-70" style={{ color: '#D61223' }}>Privacy Policy</a>
-              <a href="#" className="text-gray-400 transition-colors text-sm hover:opacity-70" style={{ color: '#D61223' }}>Terms of Service</a>
-              <a href="#" className="text-gray-400 transition-colors text-sm hover:opacity-70" style={{ color: '#D61223' }}>Cookie Policy</a>
+              <a href="#" className="text-gray-400 transition-colors text-sm hover:opacity-70 text-gray-400" >Privacy Policy</a>
+              <a href="#" className="text-gray-400 transition-colors text-sm hover:opacity-70 text-gray-400">Terms of Service</a>
+              <a href="#" className="text-gray-400 transition-colors text-sm hover:opacity-70 text-gray-400">Cookie Policy</a>
             </div>
           </div>
         </div>
