@@ -7,7 +7,7 @@ import {
   Zap,
   Users,
   CheckCircle,
-  ArrowRight
+  ArrowRight,
 } from 'lucide-react';
 
 function App() {
@@ -259,12 +259,33 @@ function App() {
 
             <div>
               <h3 className="text-white font-semibold mb-4">Follow Us</h3>
-              <ul className="space-y-3">
-                <li><a href="#" className="transition-colors hover:opacity-70" style={{ color: '#D61223' }}>Help Center</a></li>
-                <li><a href="#" className="transition-colors hover:opacity-70" style={{ color: '#D61223' }}>Documentation</a></li>
-                <li><a href="#" className="transition-colors hover:opacity-70" style={{ color: '#D61223' }}>API</a></li>
-                <li><a href="#" className="transition-colors hover:opacity-70" style={{ color: '#D61223' }}>Status</a></li>
-              </ul>
+              <div className="flex items-center space-x-4">
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-red-600 transition-colors" style={{ color: '#fff' }}>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                    <path d="M22 12a10 10 0 10-11.5 9.9v-7H8.9v-2.9h1.6V9.1c0-1.6 1-2.5 2.4-2.5.7 0 1.4.1 1.4.1v1.6h-.8c-.8 0-1 0-1 1v1.2h1.7l-.3 2.9h-1.4v7A10 10 0 0022 12z" />
+                  </svg>
+                </a>
+
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-red-600 transition-colors" style={{ color: '#fff' }}>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-5 h-5">
+                    <rect x="3" y="3" width="18" height="18" rx="5" ry="5" />
+                    <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+                    <line x1="17.5" y1="6.5" x2="17.5" y2="6.5" />
+                  </svg>
+                </a>
+
+                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-red-600 transition-colors" style={{ color: '#fff' }}>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                    <path d="M23.5 6.2s-.2-1.6-.8-2.3c-.8-1-1.7-1-2.1-1.1C16.7 2.5 12 2.5 12 2.5h-.1s-4.7 0-8.6.3c-.5 0-1.4.1-2.1 1.1-.6.7-.8 2.3-.8 2.3S0 8 0 9.8v2.4C0 14 0.3 15.6 0.3 15.6s.2 1.6.8 2.3c.8 1 1.9 1 2.4 1.1 1.7.1 7.4.3 7.4.3s4.7 0 8.6-.3c.5 0 1.4-.1 2.1-1.1.6-.7.8-2.3.8-2.3s.3-1.6.3-3.4V9.8c0-1.8-.3-3.6-.3-3.6zM9.8 15.1V8.9l6.2 3.1-6.2 3.1z" />
+                  </svg>
+                </a>
+
+                <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-red-600 transition-colors" style={{ color: '#fff' }}>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                    <path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.3 4.3 0 001.88-2.38 8.6 8.6 0 01-2.72 1.04 4.28 4.28 0 00-7.3 3.9A12.14 12.14 0 013 4.8a4.28 4.28 0 001.33 5.7 4.24 4.24 0 01-1.94-.54v.05a4.28 4.28 0 003.43 4.2 4.3 4.3 0 01-1.93.07 4.28 4.28 0 003.99 2.97A8.6 8.6 0 012 19.54a12.14 12.14 0 006.56 1.92c7.88 0 12.2-6.53 12.2-12.2v-.56A8.7 8.7 0 0022.46 6z" />
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
 
